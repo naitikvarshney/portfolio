@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+
+:root{
+    --yellow:#f9ca24;
+
+
+    --green:#27ae60;
+    --black:#333;
+    --light-color:#fff;
+    --bg-color:#222;
+    --222:#222;
+    --111:#111;
+    --1a1a1a:#1a1a1a;
+    --eee:#eee;
+    --3333:#3333;
+    --fff4:#fff4;
+
+    --box-shadow:.4rem .4rem 1rem #111,
+                -.4rem -.4rem 1rem #333;
+    --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                      -.4rem -.4rem 1rem #333 inset;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+   background-color: var(--yellow);
+   color:var(--black);
+}
+html{
+    font-size: 55.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:var(--222);
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+}
+
+.active{
+    --yellow:var(--green);
+    --black:#77777791;
+    --light-color:#111;
+    --bg-color:#e6e6e6;
+    --222:#777;
+    --111:#e6e6e6;
+    --1a1a1a:#f95d24;
+    --eee:#111;
+    --3333:#eee;
+    --fff4:#333;
+
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                      -.4rem -.4rem 1rem #fff inset;
+}
+
+body{
+    background:var(--111);
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+header{
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:35rem;
+    background:var(--1a1a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+
+#theme-toggler{
+    position: fixed;
+    top:2.5rem; right: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color:var(--light-color);
+    background: var(--bg-color);
+}
+
+#theme-toggler:hover{
+    color:var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding: .7rem 3rem;
+    background-color: var(--black);
+    color: var(--light-color);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+.btn:hover{
+    background-color: var(--yellow);
+}
+
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--yellow);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: var(--light-color);
+
+}
+
+header .user .post{
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background:var(--black);
+    color: var(--light-color);
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover{
+    background: var(--yellow);
+}
+
+#menu{
+    position: fixed;
+    top: 2rem ; right: 2rem;
+    background: var(--black);
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:var(--black);
+    color:var(--light-color);
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: var(--light-color);
+
+}
+
+.home h1{
+    font-size: 5rem;
+    color: var(--light-color);
+}
+
+.home p{
+    font-size: 2rem;
+    color: var(--eee);
+    padding: 1rem 0;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid var(--fff4);
+    color: var(--light-color);
+}
+
+.heading span{
+    color: var(--yellow);
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about .row .info{
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+.about .row .info h3{
+    font-size: 2rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.about .row .info h3 span{
+    color: var(--eee);
+    padding: 0 .5rem;
+
+}
+
+.about .row .counter{
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .counter .box{
+    width: 20rem;
+    background: var(--222);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+.about .row .counter .box span{
+    font-size: 4rem;
+    color: var(--yellow);
+}
+
+.about .row .counter .box h3{
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+.education .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid var(--light-color);
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background:var(--222);
+    color:var(--light-color);
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color:var(--light-color);
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color:var(--eee);
+    padding: 1rem 0;
+}
+/* doubt */
+.education .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:var(--light-color);
+    background:var(--yellow);
+}
+
+
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+/* doubt position relative then absolute why?*/
+.portfolio .box-container .box{
+    height: 40rem;
+    width:36rem;
+    border-radius: 1rem;
+    margin:4rem;
+    /* overflow: hidden; */
+    cursor: pointer;
+    position: relative;
+}
+
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* .portfolio .box-container .box img:hover{
+    transform: scale(1.2);
+} */
+
+.portfolio .box-container .box:hover img{
+    transform: scale(1.2);
+    filter: blur(15px);
+}
+.portfolio .box-container .box:hover .pro-content{
+    opacity: 4;
+}
+
+.pro-content{
+    position: relative;
+    padding: 40px;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+.pro-title{
+    font-size: 35px;
+    margin: 0;
+    margin-top: -60px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+.pro-info{
+    /* margin: 6rem; */
+    font-size: 1.5rem;
+
+    margin-top: 2rem;
+    line-height: 25px;
+    text-transform: none;
+    /* text-align: center; */
+
+}
+
+.pro-btn-grp{
+    /* margin-top: 3rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-gap: 20px; */
+
+}
+
+.pro-btn{
+    /* height: 40px;
+    width: 8rem; */
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+
+    color: #fff;
+    cursor: pointer;
+    bottom: 10rem;
+    margin-top: 3.7rem;
+
+}
+.pro-btn.github{
+    height: 4.7rem;
+}
+.pro-btn.live{
+    /* width: 8rem; */
+/* background: none; */
+border: 2px solid #fff;
+}
+#first-pro{
+    color: black;
+
+}
+
+#second-pro{
+    color: yellow;
+
+}
+#third-pro{
+    color: black;
+
+}
+#four-pro{
+    color: black;
+
+}
+
+
+
+.contact .row{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:4rem;
+    padding-bottom: 0;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:2rem;
+    margin:2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: var(--3333);
+    color: var(--light-color);
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:var(--light-color);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--eee);
+    padding: 1rem 0;
+    font-weight: normal;
+
+
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color: var(--yellow);
+}
+
+.contact .row .content .follow a{
+    font-size: 2.5rem;
+    color:var(--light-color);
+    margin:0 .7rem;
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+}
+
+.contact .row .content a:hover{
+    color:var(--yellow);
+}
+
+.top{
+    position: fixed;
+    bottom: 3.5rem;right: 2rem;
+    z-index: 100;
+    display: none;
+
+}
+
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+      padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:991px){
+
+   header{
+       left:-120%;
+   }
+   #theme-toggler{
+       top: 10rem;
+   }
+
+   #menu{
+       display: block;
+   }
+
+   header.toggle{
+    left:0%;
+   }
+
+   body{
+       padding:0;
+   }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+
+ }
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+
+    .education .box-container .box{
+        width:100%;
+    }
+
+    .portfolio .box-container .box{
+        width:100%;
+    }
+
+    .contact .row form{
+        margin:3rem 0;
+    }
+
+
+ }
+
+
+
+
